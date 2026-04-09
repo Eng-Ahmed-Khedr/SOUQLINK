@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "flowbite": "^4.0.1",
     "flowbite-react": "^0.12.17",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
