@@ -2,42 +2,8 @@
 
 @source "../node_modules/flowbite-react/dist/**/*.mjs";
 
-@layer base{
-    @font-face{
-        font-family: "Inter";
-        src: url(./assets/fonts/inter/Inter_18pt-Regular.woff2) format("woff2");
-        font-weight: 400;
-        font-display: swap;
-    }
-    @font-face{
-        font-family: "Inter";
-        src: url(./assets/fonts/inter/Inter_18pt-Medium.woff2) format("woff2");
-        font-weight: 500;
-        font-display: swap;
-    }
-    @font-face{
-        font-family: "Inter";
-        src: url(./assets/fonts/inter/Inter_24pt-SemiBold.woff2) format("woff2");
-        font-weight: 600;
-        font-display: swap;
-    }
-    @font-face{
-        font-family: "Inter";
-        src: url(./assets/fonts/inter/Inter_24pt-Bold.woff2) format("woff2");
-        font-weight: 700;
-        font-display: swap;
-    }
-}
-
-@plugin "flowbite/plugin";
-
-
-@theme{
-    --color-primary: #013220;
-    --color-secondary: #708090;
-    --color-tertiary: #D4AF37;
-    --color-neutral: #F8F9FA;
-
-    --font-sans: "Inter", sans-serif;
-    
+#root {
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
