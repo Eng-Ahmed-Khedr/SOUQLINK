@@ -54,7 +54,7 @@ export default function Dashboardlayout() {
                             <SidebarItem as={Link} to="/" active={location.pathname === '/'}>
                                 <FaStore className="inline-block me-2" /> MARKETPLACE
                             </SidebarItem>
-                            <SidebarItem as={Link} to="/myinventory" active={location.pathname === '/myinventory'}>
+                            <SidebarItem as={Link} to="/myInventory" active={location.pathname === '/myInventory'}>
                                 <FaArchive className="inline-block me-2" /> MY INVENTORY
                             </SidebarItem>
                             <SidebarItem as={Link} to="/activebids" active={location.pathname === '/activebids'}>
