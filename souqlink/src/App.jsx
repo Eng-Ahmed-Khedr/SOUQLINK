@@ -7,7 +7,7 @@ import ActiveBids from './pages/activebids';
 import OrderHistory from './pages/orderhistory';
 import Settings from './pages/settings';
 import Login from './pages/login';
-import Myinventory from './pages/myInventory';
+import Myinventory from './pages/myinventory';
 
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
       <Routes>
         <Route element={<Dashboardlayout />}>
           <Route path='/' element={<Home />} />
-          <Route path='/myInventory' element={<Myinventory />} />
+          <Route path='/myinventory' element={<Myinventory />} />
           <Route path='/activebids' element={<ActiveBids />} />
           <Route path='/orderhistory' element={<OrderHistory />} />
           <Route path='/settings' element={<Settings />} />
