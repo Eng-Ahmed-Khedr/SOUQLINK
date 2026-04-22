@@ -1,4 +1,3 @@
-import React from "react";
 import { Button, TextInput, Checkbox, Label } from "flowbite-react";
 
 export default function Login() {

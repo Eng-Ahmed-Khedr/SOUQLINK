@@ -1,4 +1,3 @@
-import React from "react";
 import { Button, TextInput, Label, Checkbox } from "flowbite-react";
 import { HiOutlineBadgeCheck, HiOutlineShieldCheck } from "react-icons/hi";
 
