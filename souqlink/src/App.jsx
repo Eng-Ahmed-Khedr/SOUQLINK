@@ -2,7 +2,7 @@ import './App.css';
 import { Route, Routes } from 'react-router-dom';
 
 import Home from './pages/home';
-import Dashboardlayout from './components/dashboardLayout';
+import Dashboardlayout from "./components/dashboardLayout";
 import ActiveBids from './pages/activebids';
 import OrderHistory from './pages/orderhistory';
 import Settings from './pages/settings';

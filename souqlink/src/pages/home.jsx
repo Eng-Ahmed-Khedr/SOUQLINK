@@ -2,9 +2,9 @@ import { useState } from "react"; // 1. Import useState
 import { Button } from "flowbite-react";
 import { HiBadgeCheck, HiExclamationCircle, HiLightningBolt, HiRefresh } from "react-icons/hi";
 
-import InventoryCard from "../components/inventoryCard";
+import InventoryCard from "../components/inventorycard";
 import FeedItem from "../components/feedItem";
-import ProcurementDrawer from "../components/procurementDrawer"; // 2. Import your drawer
+import ProcurementDrawer from "../components/procurementdrawer"; // 2. Import your drawer
 
 export default function Home() {
     // 3. Create the state to manage the drawer visibility
