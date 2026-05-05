@@ -68,7 +68,10 @@ export default function Dashboard() {
                                 </div>
                             </div>
                             <SidebarItemGroup>
-                                <SidebarItem className="uppercase" as={Link} to="/" active={activeLocation.pathname === '/'}>
+                                {/* <SidebarItem className="uppercase" as={Link} to="/" active={activeLocation.pathname === '/'}>
+                                    <FaStore className="inline-block me-2" />Marketplace
+                                </SidebarItem> */}
+                                <SidebarItem className="uppercase" as={Link} to="/marketplace" active={activeLocation.pathname === '/marketplace'}>
                                     <FaStore className="inline-block me-2" />Marketplace
                                 </SidebarItem>
                                 <SidebarItem className="uppercase" as={Link} to="/myinventory" active={activeLocation.pathname === '/myinventory'}>
