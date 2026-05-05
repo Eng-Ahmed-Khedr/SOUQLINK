@@ -1,6 +1,6 @@
 import { Avatar, Dropdown, DropdownDivider, DropdownHeader, DropdownItem, Navbar, NavbarBrand, NavbarCollapse, NavbarLink, NavbarToggle, Sidebar, SidebarItem, SidebarItemGroup, SidebarItems, SidebarLogo, TextInput } from "flowbite-react";
 import { useState } from "react";
-import { FaArchive, FaFileSignature, FaGavel, FaSearch, FaStore } from "react-icons/fa";
+import { FaArchive, FaFileSignature, FaGavel, FaHome, FaSearch, FaStore } from "react-icons/fa";
 import { FaBarsStaggered } from "react-icons/fa6";
 import { IoIosExit } from "react-icons/io";
 import { Link, Outlet, useLocation } from "react-router-dom";
@@ -68,9 +68,9 @@ export default function Dashboard() {
                                 </div>
                             </div>
                             <SidebarItemGroup>
-                                {/* <SidebarItem className="uppercase" as={Link} to="/" active={activeLocation.pathname === '/'}>
-                                    <FaStore className="inline-block me-2" />Marketplace
-                                </SidebarItem> */}
+                                <SidebarItem className="uppercase" as={Link} to="/" active={activeLocation.pathname === '/'}>
+                                    <FaHome className="inline-block me-2" />Home
+                                </SidebarItem>
                                 <SidebarItem className="uppercase" as={Link} to="/marketplace" active={activeLocation.pathname === '/marketplace'}>
                                     <FaStore className="inline-block me-2" />Marketplace
                                 </SidebarItem>
@@ -89,6 +89,9 @@ export default function Dashboard() {
                             <SidebarItemGroup className="mt-auto!">
                                 <SidebarItem className="uppercase" as={Link} to="/settings" active={activeLocation.pathname === '/settings'} >
                                     Settings
+                                </SidebarItem>
+                                <SidebarItem className="uppercase" as={Link} to="/login" active={activeLocation.pathname === '/login'} >
+                                    Sign Out
                                 </SidebarItem>
                             </SidebarItemGroup>
 
