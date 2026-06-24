@@ -77,6 +77,9 @@ export default function Dashboard() {
                                 <SidebarItem className="uppercase" as={Link} to="/myinventory" active={activeLocation.pathname === '/myinventory'}>
                                     <FaArchive className="inline-block me-2" />My Inventory
                                 </SidebarItem>
+                                <SidebarItem className="uppercase" as={Link} to="/myinventorynew" active={activeLocation.pathname === '/myinventorynew'}>
+                                    <FaArchive className="inline-block me-2" />My Inventory New
+                                </SidebarItem>
                                 <SidebarItem className="uppercase" as={Link} to="/activebids" active={activeLocation.pathname === '/activebids'}>
                                     <FaGavel className="inline-block me-2 -scale-x-100" />Active Bids
                                 </SidebarItem>
@@ -87,6 +90,9 @@ export default function Dashboard() {
 
 
                             <SidebarItemGroup className="mt-auto!">
+                                <SidebarItem className="uppercase" as={Link} to="/cart" active={activeLocation.pathname === '/cart'} >
+                                    Cart
+                                </SidebarItem>
                                 <SidebarItem className="uppercase" as={Link} to="/settings" active={activeLocation.pathname === '/settings'} >
                                     Settings
                                 </SidebarItem>

@@ -3,6 +3,8 @@ import { Link, useParams } from "react-router-dom";
 import { Badge, Button, TextInput } from "flowbite-react";
 import { FaStar } from "react-icons/fa";
 import { RiNumbersLine } from "react-icons/ri";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../store/slices/cart.slice";
 
 export default function Product() {
 
@@ -18,6 +20,15 @@ export default function Product() {
     ), []);
 
     const [amount, setAmount] = useState(15);
+
+    // const cart = useSelector(state => state.cart);
+    // console.log(cart);
+    const dispatch = useDispatch();
+
+    // useEffect(() => {
+    //     console.log(dispatch(addToCart()));
+    // }, []);
+
     return (
         <>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5 px-4 pt-4">
@@ -65,7 +76,11 @@ export default function Product() {
                 <div></div>
                 <div className="grid  gap-2 self-end p-5">
                     <TextInput id="amount" type="number" placeholder="Amount" icon={RiNumbersLine} theme={{ field: { input: { base: "!bg-[#E7E8E9] !text-black placeholder:!text-[#6B7280] !border-none !rounded-none !uppercase !font-bold" } } }} />
-                    <Button className="uppercase bg-white text-[#013220] border border-[#013220] hover:bg-[#013220] hover:text-white transition-colors ease-in-out duration-300 rounded-none mt-5">
+                    <Button onClick={() =>
+                        dispatch(
+                            addToCart(product)
+                        )
+                    } className="cursor-pointer uppercase bg-white text-[#013220] border border-[#013220] hover:bg-[#013220] hover:text-white transition-colors ease-in-out duration-300 rounded-none mt-5">
                         Procure Selection
                     </Button>
                 </div>
