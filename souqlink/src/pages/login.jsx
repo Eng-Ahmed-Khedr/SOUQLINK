@@ -1,5 +1,7 @@
 import { Button, Checkbox, Label, TextInput } from "flowbite-react";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import { authenticate } from "../store/slices/login.slice";
 
 const inputTheme = {
     field: {
@@ -16,8 +18,7 @@ const labelTheme = {
 }
 
 export default function Login() {
-
-    
+    const dispatch = useDispatch();
     return (
         <>
             <div className="relative w-full h-screen bg-[#013220] flex flex-col items-center justify-center">
@@ -41,18 +42,29 @@ export default function Login() {
                     <p className="text-gray-400 text-[10px] mb-10">
                         ENTER CREDENTIALS TO ACCESS THE SOUQLINK ECOSYSTEM.
                     </p>
-                    <form className="flex max-w-md flex-col gap-4">
+                    <form className="flex max-w-md flex-col gap-4" onSubmit={(e) => {
+                        e.preventDefault();
+                        // const formData = new FormData(e.target);
+
+                        console.log("login");
+                        dispatch(authenticate(
+                            // {
+                            //     username: formData.get("username"),
+                            //     password: formData.get("password")
+                            // }
+                        ));
+                    }}>
                         <div className="mb-8">
                             <div className="mb-2 block">
-                                <Label htmlFor="id" theme={labelTheme}>ID</Label>
+                                <Label htmlFor="username" theme={labelTheme}>ID</Label>
                             </div>
-                            <TextInput id="id" type="text" placeholder="ID-0000000" required shadow theme={inputTheme} />
+                            <TextInput id="username" name="username" type="text" placeholder="ID-0000000"  shadow theme={inputTheme} />
                         </div>
                         <div className="mb-8">
                             <div className="mb-2 block">
-                                <Label htmlFor="password2" theme={labelTheme}>Access Protocol</Label>
+                                <Label htmlFor="password" theme={labelTheme}>Access Protocol</Label>
                             </div>
-                            <TextInput id="password2" type="password" placeholder="••••••••" required shadow theme={inputTheme} />
+                            <TextInput id="password" name="password" type="password" placeholder="••••••••"  shadow theme={inputTheme} />
                         </div>
                         <div className="flex items-center gap-2">
                             <Checkbox id="agree" className="bg-[#364153] rounded-none" />
